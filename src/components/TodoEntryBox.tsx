@@ -16,7 +16,7 @@ const TodoEntryBox = () => {
   const handleAddTodo = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     if (newTodo === "") return;
-    const newTodoList: Todo[] = [...todos, { _id: Date.now(), task: newTodo, bg: pickRandom(colors) }];
+    const newTodoList: Todo[] = [...todos, { _id: Date.now(), task: newTodo, bg: pickRandom(colors), isCompleted: false }];
     localStorage.setItem("todos", JSON.stringify(newTodoList));
     setTodos(newTodoList);
     setNewTodo("");

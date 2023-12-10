@@ -6,7 +6,8 @@ import Todos from "./Todos";
 export type Todo = {
   _id: Date,
   task: string,
-  bg: string
+  bg: string,
+  isCompleted: boolean,
 }
 
 export const todosContext = createContext<any>(null);
