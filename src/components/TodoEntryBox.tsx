@@ -25,8 +25,18 @@ const TodoEntryBox = () => {
   return (
     <section className="w-full">
       <form onSubmit={handleAddTodo} className="flex gap-4 w-full">
-        <input type="text" placeholder="Enter a new todo..." value={newTodo} onChange={(e) => setNewTodo(e.target.value)} ref={inputRef} className="flex-1 bg-purple-200 py-2 px-8 text-zinc-800 placeholder:text-zinc-800 outline-none rounded-md" />
-        <input type="submit" value="Add" className="bg-zinc-500 text-zinc-100 w-40 py-2 px-3 outline-none rounded-md" />
+        <input
+          type="text"
+          placeholder="Enter a new todo..."
+          value={newTodo}
+          onChange={(e) => setNewTodo(e.target.value)}
+          ref={inputRef}
+          className="flex-1 bg-purple-200 py-2 px-8 text-zinc-800 placeholder:text-zinc-800 outline-none rounded-md" />
+
+        <input
+          type="submit"
+          value="Add"
+          className="bg-zinc-500 text-zinc-100 w-40 py-2 px-3 outline-none rounded-md" />
       </form>
     </section>
   );

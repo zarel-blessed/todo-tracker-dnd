@@ -5,5 +5,15 @@
 @tailwind utilities;
 
 * {
-  font-family: "Poppins", sans-serif;
+	font-family: "Poppins", sans-serif;
+}
+
+@layer components {
+	.edit-box {
+		@apply fixed top-1/2 left-1/2 z-50 w-full max-w-2xl bg-purple-50 p-12 rounded-lg translate-x-[-50%] translate-y-[-50%] transition-all duration-300 ease-in delay-200 cursor-default;
+	}
+
+	.overlay {
+		@apply fixed inset-0 bg-slate-800/50 transition-all duration-300 cursor-default;
+	}
 }

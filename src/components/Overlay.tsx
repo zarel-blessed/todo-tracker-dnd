@@ -1,8 +1,8 @@
-const Overlay = () => {
+import { SetStateAction } from "react";
+
+const Overlay = ({ setEditMode }: { setEditMode: React.Dispatch<SetStateAction<boolean>> }) => {
   return (
-    <div>
-      <p>Overlay</p>
-    </div>
+    <div className="overlay" onClick={() => setEditMode(false)} />
   );
 }
 
